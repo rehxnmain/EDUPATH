@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My Skill Portfolio | EduPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="po.css">
+</head>
+
+<body>
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <aside><a class="brand" href="#"><span>✦</span>Edu<b>Path</b></a>
+        <p class="made">A CODE SLAYERS CREATION</p>
+        <nav><a href="sd.html">⌂ <i>Dashboard</i></a><a href="sa.html">✓ <i>Skill
+                    Assessment</i></a><a href="sp.html">◉ <i>My Skills</i></a><a href="l.html">▣
+                <i>Learning Path</i></a><a href="i.html">▤ <i>Internships</i></a><a href="pl.html">♙
+                <i>Placements</i></a><a class="active" href="#">▱ <i>My Portfolio</i></a></nav>
+        <footer><small>NEED HELP?</small><a href="h.html">? <i>Help Center</i></a><a href="index.html">↪ <i>Logout</i></a>
+        </footer>
+    </aside>
+    <main>
+        <header>
+            <div>
+                <p class="crumb">DASHBOARD <b>/</b> MY PORTFOLIO</p>
+                <h1>My <em>skill portfolio.</em></h1>
+                <p>Showcase your verified abilities, projects, and career journey in one place.</p>
+            </div>
+            <div class="actions"><button id="share">↗ Share portfolio</button><button class="primary" id="download">⇩
+                    Download resume</button>
+                <div class="avatar">AS</div>
+            </div>
+        </header>
+        <section class="identity">
+            <div class="cover"></div>
+            <div class="identity-content">
+                <div class="photo">AS<span>✓</span></div>
+                <div class="bio">
+                    <div>
+                        <h2>user-interface <mark>Verified</mark></h2>
+                        <p> update your location in profile</p>
+                    </div>
+                    <p class="about">add bio in your profile.</p>
+                    <div class="links"><a href="#">⌘ github.com/user</a><a href="#">in
+                            linkedin.com/in/user</a><a href="#">⌁ user.dev</a></div>
+                </div>
+                <div class="complete">
+                    <div class="ring"><strong id="ringText">0%</strong></div><span>Portfolio complete</span><button
+                        id="edit">Edit profile</button>
+                </div>
+            </div>
+        </section>
+        <div class="grid">
+            <section class="card skill-card">
+                <div class="card-head">
+                    <div><small>YOUR CAPABILITIES</small>
+                        <h3>Skills & expertise</h3>
+                    </div><button class="outline" id="addSkill">+ Add skill</button>
+                </div>
+                <div class="skill-groups">
+                    <div>
+                        <p class="group-title">TECHNICAL SKILLS YOU CAN LEARN</p>
+                        <div class="chips"><span class="expert">JavaScript <b>Advanced</b></span><span
+                                class="expert">HTML / CSS <b>Advanced</b></span><span class="good">React
+                                <b>Intermediate</b></span><span class="good">Python <b>Intermediate</b></span><span
+                                class="learn">Node.js <b>Learning</b></span><span class="learn">AWS
+                                <b>Learning</b></span></div>
+                    </div>
+                    <div>
+                        <p class="group-title">PROFESSIONAL SKILLS YOU SHOULD LEARN</p>
+                        <div class="chips"><span class="soft">Problem solving</span><span
+                                class="soft">Teamwork</span><span class="soft">Communication</span><span
+                                class="soft">Adaptability</span></div>
+                    </div>
+                </div><a class="view" href="skill-profile.html">View detailed skill analysis <b>→</b></a>
+            </section>
+            <section class="card readiness"><small>CAREER READINESS</small>
+                <h3>You're building momentum.</h3>
+                <div class="score-line"><strong>00</strong><span>/ 100</span><b>+0%</b></div>
+                <div class="score-bar"><i></i></div>
+                <p>Complete <em>15 recommended courses</em> to move closer to your target role.</p><a
+                    href="learning-path.html">Continue learning plan →</a>
+            </section>
+        </div>
+        <section class="card projects">
+            <div class="card-head">
+                <div><small>PROOF OF WORK</small>
+                    <h3>Featured projects you can work now</h3>
+                </div><button class="outline" id="addProject">+ Add project</button>
+            </div>
+            <div class="project-grid">
+                <article>
+                    <div class="project-image one"><span>⌘</span></div>
+                    <div class="project-info">
+                        <p><b>Web Application</b><i>•</i> 2026</p>
+                        <h4>Campus Connect</h4><span>A student community platform for campus events, clubs, and
+                            collaboration.</span>
+                        <div><em>React</em><em>Firebase</em><em>Tailwind</em></div><a href="#">View project ↗</a>
+                    </div>
+                </article>
+                <article>
+                    <div class="project-image two"><span>◌</span></div>
+                    <div class="project-info">
+                        <p><b>Data Analysis</b><i>•</i> 2026</p>
+                        <h4>Career Insight Dashboard</h4><span>An interactive dashboard that visualizes placement trends
+                            and in-demand skills.</span>
+                        <div><em>Python</em><em>SQL</em><em>Power BI</em></div><a href="#">View project ↗</a>
+                    </div>
+                </article>
+                <article class="add-card" id="projectCard"><span>+</span><b>Add your next project</b><small>Show
+                        recruiters what you can do.</small></article>
+            </div>
+        </section>
+        <div class="lower">
+            <section class="card credentials">
+                <div class="card-head">
+                    <div><small>VERIFIED LEARNING</small>
+                        <h3>Certificates & achievements</h3>
+                    </div><button class="outline" id="addCertificate">+ Add certificate</button>
+                </div>
+                
+            </section>
+            <section class="card experience">
+                <div class="card-head">
+                    <div><small>EXPERIENCE</small>
+                        <h3>Internships & activities</h3>
+                    </div><button class="outline">+ Add</button>
+                </div>
+               
+                </div><a class="view" href="internships.html">View all experience <b>→</b></a>
+            </section>
+        </div>
+    </main>
+    <div class="toast" id="toast">Portfolio link copied to clipboard!</div>
+    <div class="modal" id="modal">
+        <div><button class="close">×</button>
+            <h2 id="modalTitle">Add to portfolio</h2>
+            <p>Keep your portfolio current and verified.</p><label>Title<input
+                    placeholder="Enter title"></label><label>Description<textarea
+                    placeholder="Describe your work or achievement"></textarea></label><button class="primary save">Save
+                to portfolio →</button>
+        </div>
+    </div>
+    <script src="po.js"></script>
+</body>
+
+</html>

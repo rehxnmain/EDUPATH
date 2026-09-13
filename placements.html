@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Placements | EduPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="placements.css">
+</head>
+
+<body>
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <aside><a class="brand"><span>✦</span>Edu<b>Path</b></a>
+        <p class="made">A CODE SLAYERS CREATION</p>
+        <nav><a href="student-dashboard.html">⌂ <i>Dashboard</i></a><a href="skill-assessment.html">✓ <i>Skill
+                    Assessment</i></a><a href="skill-profile.html">◉ <i>My Skills</i></a><a href="learning-path.html">▣
+                <i>Learning Path</i></a><a href="internships.html">▤ <i>Internships</i></a><a class="active" href="#">♙
+                <i>Placements</i></a><a href="portfolio.html">▱ <i>My Portfolio</i></a></nav>
+        <footer><small>NEED HELP?</small><a href="help-center.html">? <i>Help Center</i></a><a href="index.html">↪ <i>Logout</i></a>
+        </footer>
+    </aside>
+    <main>
+        <header>
+            <div>
+                <p class="crumb">DASHBOARD <b>/</b> PLACEMENTS</p>
+                <h1>Step into your <em>next chapter.</em></h1>
+                <p>Discover graduate opportunities that match your skills, progress, and ambitions.</p>
+            </div>
+            <div class="profile"><span>AS</span>
+                <div><b>Nitya singh</b><small>Computer Science</small></div><i>⌄</i>
+            </div>
+        </header>
+        <section class="placement-hero">
+            <div class="trophy">♛</div>
+            <div><small>PLACEMENT READINESS</small>
+                <h2>You are <mark>76% ready</mark> for your first role.</h2>
+                <p>Complete React Fundamentals and polish your portfolio to unlock more high-match roles.</p>
+                <div class="mini-progress"><i></i><span>4 more points to your next readiness milestone</span></div>
+            </div><a href="learning-path.html">Improve readiness →</a>
+        </section>
+        <section class="dashboard-row">
+            <article class="metric"><span class="metric-icon indigo">▤</span>
+                <div><b>18</b>
+                    <p>Jobs matched</p>
+                </div><em>↑ 5 new</em>
+            </article>
+            <article class="metric"><span class="metric-icon teal">✓</span>
+                <div><b>4</b>
+                    <p>Applications</p>
+                </div><em class="neutral">2 active</em>
+            </article>
+            <article class="metric"><span class="metric-icon pink">◷</span>
+                <div><b>2</b>
+                    <p>Interviews</p>
+                </div><em class="warning">This week</em>
+            </article>
+            <article class="metric"><span class="metric-icon gold">★</span>
+                <div><b>1</b>
+                    <p>Offer received</p>
+                </div><em>Congratulations!</em>
+            </article>
+        </section>
+        <section class="tabs"><button class="selected" data-tab="matches">Recommended jobs <b>18</b></button><button
+                data-tab="applications">My applications <b>4</b></button><button data-tab="interviews">Interviews
+                <b>2</b></button><span></span><button class="saved" id="saved">♡ Saved jobs</button></section>
+        <section class="search">
+            <div class="searchbox">⌕ <input id="query" placeholder="Search job roles, companies, or skills..."><button
+                    id="search">Search</button></div><button id="filters">☷ Filters <b>4</b></button><select id="sort">
+                <option>Best match</option>
+                <option>Newest roles</option>
+                <option>Highest package</option>
+                <option>Deadline soon</option>
+            </select>
+        </section>
+        <section class="main-grid">
+            <div>
+                <div class="list-title">
+                    <div>
+                        <h2>Roles you are ready to explore <span id="jobCount">8</span></h2>
+                        <p>Personalized using your skills and eligibility.</p>
+                    </div><button>▦</button>
+                </div>
+                <div id="jobList" class="job-list">
+                    <article class="job" data-name="Junior Frontend Engineer NexaSoft React JavaScript">
+                        <div class="logo purple">NS</div>
+                        <div class="job-data">
+                            <div class="job-title">
+                                <h3>Junior Frontend Engineer</h3><span class="match">91% match</span><span
+                                    class="eligible">Eligible</span>
+                            </div>
+                            <p>NexaSoft Technologies <i>•</i> Bengaluru <i>•</i> Hybrid</p>
+                            <div class="chips"><b>React</b><b>JavaScript</b><b>CSS</b><b>Git</b></div>
+                            <div class="details"><span>₹ 8–11 LPA</span><span>Full-time</span><span>Apply by Sep
+                                    25</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">View & apply
+                                →</button></div>
+                    </article>
+                    <article class="job" data-name="Associate Software Engineer QuantumByte Node JavaScript">
+                        <div class="logo aqua">QB</div>
+                        <div class="job-data">
+                            <div class="job-title">
+                                <h3>Associate Software Engineer</h3><span class="match">84% match</span><span
+                                    class="eligible">Eligible</span>
+                            </div>
+                            <p>QuantumByte Labs <i>•</i> Hyderabad <i>•</i> On-site</p>
+                            <div class="chips"><b>JavaScript</b><b>Node.js</b><b>APIs</b><b>SQL</b></div>
+                            <div class="details"><span>₹ 7–9 LPA</span><span>Full-time</span><span>Apply by Sep
+                                    20</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">View & apply
+                                →</button></div>
+                    </article>
+                    <article class="job" data-name="Graduate UI Developer PixelCraft React Figma">
+                        <div class="logo pink">PC</div>
+                        <div class="job-data">
+                            <div class="job-title">
+                                <h3>Graduate UI Developer</h3><span class="match">81% match</span><span
+                                    class="eligible">Eligible</span>
+                            </div>
+                            <p>PixelCraft Studio <i>•</i> Remote</p>
+                            <div class="chips"><b>React</b><b>Figma</b><b>Tailwind</b><b>Accessibility</b></div>
+                            <div class="details"><span>₹ 6–8 LPA</span><span>Full-time</span><span>Apply by Oct
+                                    03</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">View & apply
+                                →</button></div>
+                    </article>
+                    <article class="job" data-name="Software Developer Trainee CloudScale HTML CSS JavaScript">
+                        <div class="logo blue">CS</div>
+                        <div class="job-data">
+                            <div class="job-title">
+                                <h3>Software Developer Trainee</h3><span class="good">74% match</span><span
+                                    class="eligible">Eligible</span>
+                            </div>
+                            <p>CloudScale Solutions <i>•</i> Pune <i>•</i> Hybrid</p>
+                            <div class="chips"><b>HTML</b><b>CSS</b><b>JavaScript</b><b>Cloud</b></div>
+                            <div class="details"><span>₹ 5–7 LPA</span><span>Full-time</span><span>Apply by Oct
+                                    10</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">View & apply
+                                →</button></div>
+                    </article>
+                </div><button id="more" class="more">Load more jobs ↓</button>
+            </div>
+            <aside class="side">
+                <section class="panel pipeline">
+                    <div class="panel-head">
+                        <h3>Application pipeline</h3><a href="#">View board</a>
+                    </div>
+                    <div class="pipe"><span class="p-icon review">▣</span>
+                        <div><b>Under review</b>
+                            <p>Microsoft · Frontend Engineer</p>
+                        </div><em>Sep 14</em>
+                    </div>
+                    <div class="pipe"><span class="p-icon interview">◷</span>
+                        <div><b>Technical interview</b>
+                            <p>Amazon · SDE I</p>
+                        </div><em class="today">Today</em>
+                    </div>
+                    <div class="pipe"><span class="p-icon offer">★</span>
+                        <div><b>Offer received</b>
+                            <p>DataVista · UI Developer</p>
+                        </div><em class="offer-text">View offer</em>
+                    </div>
+                </section>
+                <section class="panel event"><span>◷</span><small>UP NEXT · TODAY, 3:00 PM</small>
+                    <h3>Amazon technical interview</h3>
+                    <p>Practice coding questions, review your portfolio, and join 10 minutes early.</p><button
+                        id="prep">Open interview prep →</button>
+                </section>
+                <section class="panel coach">
+                    <div class="coach-avatar">MK</div>
+                    <div><small>CAREER COACH</small>
+                        <h3>Need a confidence boost?</h3>
+                        <p>Book a 1:1 placement session with Maya.</p><a id="coach">Book a session →</a>
+                    </div>
+                </section>
+            </aside>
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <div><button class="close">×</button><span>♛</span>
+            <h2 id="modalTitle">Apply for a role</h2>
+            <p>Your verified skill portfolio, resume, and academic eligibility will be shared with the recruiter.</p>
+            <label>Message to recruiter<textarea
+                    placeholder="Why are you a strong fit for this role?"></textarea></label><label class="check"><input
+                    type="checkbox" checked><span></span>Share my verified EduPath portfolio</label><button
+                id="confirm">Submit job application →</button>
+        </div>
+    </div>
+    <div id="toast" class="toast">Application submitted successfully!</div>
+    <script src="placements.js"></script>
+</body>
+
+</html>

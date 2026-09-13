@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Skill Assessment | EduPath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="skill-assessment.css">
+</head>
+<body>
+  <div class="glow one"></div><div class="glow two"></div>
+  <aside class="sidebar">
+    <a href="#" class="brand"><span>✦</span>Edu<b>Path</b></a>
+    <p class="creator">A CODE SLAYERS CREATION</p>
+    <nav>
+      <a href="student-dashboard.html">⌂ <span>Dashboard</span></a>
+      <a class="active" href="#">✓ <span>Skill Assessment</span></a>
+      <a href="skill-profile.html">◉ <span>My Skills</span></a>
+      <a href="learning-path.html">▣ <span>Learning Path</span></a>
+      <a href="internships.html">▤ <span>Internships</span></a>
+      <a href="placements.html">♙ <span>Placements</span></a>
+      <a href="portfolio.html">▱ <span>My Portfolio</span></a>
+    </nav>
+    <div class="support"><small>NEED HELP?</small><a href="help-center.html">? Help Center</a><a href="index.html">↪ Logout</a></div>
+  </aside>
+
+  <main>
+    <header><div><p class="crumb">DASHBOARD <b>/</b> SKILL ASSESSMENT</p><h1>Discover your <em>superpowers.</em></h1><p class="sub">Answer honestly. We will turn your responses into a personalized growth plan.</p></div><div class="profile"><span>AS</span><div><b>Nitya singh</b><small>Computer Science</small></div><i>⌄</i></div></header>
+    <section class="assessment-card">
+      <div class="assessment-top"><div><span class="section-tag">SECTION 01</span><h2>Technical Foundations</h2><p>Let’s understand where you are today.</p></div><div class="timer"><span>◷</span><div><small>TIME REMAINING</small><b id="timer">14:59</b></div></div></div>
+      <div class="steps"><div class="done"><b>✓</b><span>Profile</span></div><i></i><div class="current"><b>2</b><span>Technical</span></div><i></i><div><b>3</b><span>Aptitude</span></div><i></i><div><b>4</b><span>Soft Skills</span></div><i></i><div><b>5</b><span>Results</span></div></div>
+      <div class="progress-wrap"><div class="progress-info"><span>Question <b id="currentQuestion">1</b> of 5</span><span><b id="percent">20%</b> complete</span></div><div class="bar"><span id="bar"></span></div></div>
+      <form id="assessmentForm">
+        <article class="question active" data-question="1"><span class="q-number">01</span><h3>How confident are you with <mark>JavaScript fundamentals?</mark></h3><p>Select the answer that best describes your current ability.</p><div class="answers"><label><input type="radio" name="q1" value="1"><span class="radio"></span><div><b>I am just getting started</b><small>I know basic syntax but need guided practice.</small></div></label><label><input type="radio" name="q1" value="2"><span class="radio"></span><div><b>I can build simple projects</b><small>I understand variables, functions, arrays, and DOM basics.</small></div></label><label><input type="radio" name="q1" value="3"><span class="radio"></span><div><b>I am confident with advanced concepts</b><small>I work with asynchronous code, APIs, ES6+, and debugging.</small></div></label></div></article>
+        <article class="question" data-question="2"><span class="q-number">02</span><h3>Which area would you most like to <mark>develop next?</mark></h3><p>This helps us recommend the right learning path for you.</p><div class="answers"><label><input type="radio" name="q2" value="frontend"><span class="radio"></span><div><b>Frontend development</b><small>Interfaces, React, JavaScript, responsive design.</small></div></label><label><input type="radio" name="q2" value="data"><span class="radio"></span><div><b>Data and AI</b><small>Python, SQL, analytics, machine learning.</small></div></label><label><input type="radio" name="q2" value="cloud"><span class="radio"></span><div><b>Cloud and backend</b><small>APIs, databases, DevOps, cloud platforms.</small></div></label></div></article>
+        <article class="question" data-question="3"><span class="q-number">03</span><h3>How do you approach a <mark>new problem?</mark></h3><p>Choose the statement closest to your natural working style.</p><div class="answers"><label><input type="radio" name="q3" value="1"><span class="radio"></span><div><b>I ask for an example or template first</b><small>I learn best through guidance and worked examples.</small></div></label><label><input type="radio" name="q3" value="2"><span class="radio"></span><div><b>I break it into smaller parts</b><small>I research, test, and iterate toward a solution.</small></div></label><label><input type="radio" name="q3" value="3"><span class="radio"></span><div><b>I define the strategy and lead the solution</b><small>I confidently evaluate alternatives and make decisions.</small></div></label></div></article>
+        <article class="question" data-question="4"><span class="q-number">04</span><h3>Rate your <mark>communication and teamwork</mark> skills.</h3><p>Think about presentations, collaboration, and receiving feedback.</p><div class="rating"><button type="button" data-rate="1">1<small>Learning</small></button><button type="button" data-rate="2">2<small>Developing</small></button><button type="button" data-rate="3">3<small>Good</small></button><button type="button" data-rate="4">4<small>Strong</small></button><button type="button" data-rate="5">5<small>Excellent</small></button></div><input type="hidden" name="q4" id="ratingValue"></article>
+        <article class="question" data-question="5"><span class="q-number">05</span><h3>What is your preferred <mark>career direction?</mark></h3><p>Your result will include roles and courses aligned with this goal.</p><div class="answers"><label><input type="radio" name="q5" value="developer"><span class="radio"></span><div><b>Software Developer</b><small>Build web, mobile, or backend applications.</small></div></label><label><input type="radio" name="q5" value="analyst"><span class="radio"></span><div><b>Data Analyst / Scientist</b><small>Discover insights from data and build intelligent models.</small></div></label><label><input type="radio" name="q5" value="designer"><span class="radio"></span><div><b>Product / UI-UX Designer</b><small>Create human-centered digital experiences.</small></div></label></div></article>
+      </form>
+      <footer><button class="back" id="back" type="button">← Back</button><button class="save" id="save" type="button">Save & exit</button><button class="next" id="next" type="button">Continue <span>→</span></button></footer>
+    </section>
+    <p class="privacy">🔒 Your answers are private and used only to personalize your EduPath experience.</p>
+  </main>
+  <div id="resultModal" class="modal"><div class="result"><span class="result-icon">✦</span><h2>Assessment complete!</h2><p>Your personalized skill report is ready.</p><div class="score"><b id="score">76</b><span>Career readiness score</span></div><button onclick="location.href='skill-profile.html'">View my skill profile →</button></div></div>
+  <script src="skill-assessment.js"></script>
+</body></html>

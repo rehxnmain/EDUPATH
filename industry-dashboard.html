@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Industry Dashboard | EduPath</title>
+    <link rel="stylesheet" href="industry.css">
+</head>
+
+<body>
+    <main class="industry-app">
+        <aside><a class="brand">✦ Edu<b>Path</b></a>
+            <div class="company">
+                <div class="company-logo">NT</div><b id="companyName">NITYA Technologies</b><small>Verified
+                    employer</small>
+            </div>
+            <nav><button class="nav active" data-page="dashboard">▦ <span>Dashboard</span></button><button class="nav"
+                    data-page="listings">＋ <span>List a job</span></button><button class="nav" data-page="candidates">♙
+                    <span>Select candidates</span><i id="candidateBadge">0</i></button><button class="nav"
+                    data-page="queries">? <span>Queries</span><i>3</i></button><button class="nav"
+                    data-page="employees">♧ <span>Current employees</span></button></nav>
+            <button id="logout" class="logout" onclick="window.location.href='index.html'">↪ Switch account</button>
+        </aside>
+        <section class="main">
+            <header>
+                <div><span class="eyebrow">INDUSTRY WORKSPACE</span>
+                    <h1 id="title">Employer dashboard</h1>
+                    <p id="subtitle">Manage opportunities, candidates, and your company presence.</p>
+            </header>
+            <section id="page"></section>
+        </section>
+    </main>
+    <div id="toast" class="toast"></div>
+    <script src="industry.js"></script>
+</body>
+
+</html>

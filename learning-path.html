@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Learning Path | EduPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="learning-path.css">
+</head>
+
+<body>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <aside><a class="brand"><span>✦</span>Edu<b>Path</b></a>
+        <p class="made">A CODE SLAYERS CREATION</p>
+        <nav><a href="student-dashboard.html">⌂ <i>Dashboard</i></a><a href="skill-assessment.html">✓ <i>Skill
+                    Assessment</i></a><a href="skill-profile.html">◉ <i>My Skills</i></a><a class="active" href="#">▣
+                <i>Learning Path</i></a><a href="internships.html">▤ <i>Internships</i></a><a href="placements.html">♙
+                <i>Placements</i></a><a href="portfolio.html">▱ <i>My Portfolio</i></a></nav>
+        <footer><small>NEED HELP?</small><a href="help-center.html">? <i>Help Center</i></a><a href="index.html">↪ <i>Logout</i></a>
+        </footer>
+    </aside>
+    <main>
+        <header>
+            <div>
+                <p class="crumb">DASHBOARD <b>/</b> LEARNING PATH</p>
+                <h1>Your path to <em>Frontend Developer.</em></h1>
+                <p>Personalized recommendations built from your assessment, skill gaps, and career goal.</p>
+            </div>
+            <div class="profile"><span>AS</span>
+                <div><b>Nitya singh</b><small>Computer Science</small></div><i>⌄</i>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="hero-copy"><span class="label">YOUR 90-DAY ROADMAP</span>
+                <h2>Turn your potential into <mark>progress.</mark></h2>
+                <p>Complete these targeted learning experiences to raise your career readiness from <b>76%</b> to
+                    <b>90%+</b>.</p>
+                <div class="hero-stats">
+                    <div><strong>5</strong><span>Courses selected</span></div>
+                    <div><strong>34h</strong><span>Learning ahead</span></div>
+                    <div><strong>2</strong><span>Skills to unlock</span></div>
+                </div>
+            </div>
+            <div class="journey">
+                <div class="road"><span class="node done">✓</span><i></i><span class="node active">2</span><i></i><span
+                        class="node">3</span><i></i><span class="node">★</span></div>
+                <div class="road-labels"><b>Start</b><b>Foundation</b><b>Build</b><b>Ready</b></div>
+                <div class="week">WEEK 3 OF 12</div>
+            </div>
+        </section>
+        <section class="filter">
+            <div class="tabs"><button class="selected" data-filter="all">My roadmap <b>5</b></button><button
+                    data-filter="recommended">Recommended</button><button data-filter="saved">Saved courses</button>
+            </div>
+            <div class="filter-actions"><button id="filter">⌘ Filters</button><button id="view">▦</button></div>
+        </section>
+        <section class="stage">
+            <div class="stage-title"><span class="step">01</span>
+                <div><small>NOW · WEEKS 1–3</small>
+                    <h2>Strengthen your foundation</h2>
+                    <p>Build confidence in the essential frontend skills companies expect.</p>
+                </div>
+                <div class="stage-progress"><b>1 / 2 completed</b><span><i></i></span></div>
+            </div>
+            <div class="course-grid">
+                <article class="course complete" data-course="JavaScript Essentials">
+                    <div class="course-top"><span class="provider blue">JS</span><span class="status">✓ Completed</span>
+                    </div>
+                    <p class="course-meta">CODECADEMY · BEGINNER</p>
+                    <h3>JavaScript Essentials</h3>
+                    <p class="description">Master variables, functions, arrays, objects, and modern ES6 syntax.</p>
+                    <div class="tags"><b>JavaScript</b><b>ES6</b><b>Problem Solving</b></div>
+                    <div class="course-foot"><span>◷ 8 hours</span><button class="view-course">View certificate
+                            →</button></div>
+                </article>
+                <article class="course" data-course="React Fundamentals">
+                    <div class="course-top"><span class="provider react">⚛</span><span class="match">High impact</span>
+                    </div>
+                    <p class="course-meta">META · INTERMEDIATE</p>
+                    <h3>React Fundamentals</h3>
+                    <p class="description">Create dynamic, component-based interfaces with React and hooks.</p>
+                    <div class="tags"><b>React</b><b>Components</b><b>Hooks</b></div>
+                    <div class="course-foot"><span>◷ 12 hours</span><button class="start-course">Start course →</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="stage">
+            <div class="stage-title"><span class="step purple">02</span>
+                <div><small>NEXT · WEEKS 4–7</small>
+                    <h2>Build real-world skills</h2>
+                    <p>Learn the tools and workflows used on professional development teams.</p>
+                </div>
+                <div class="stage-progress"><b>0 / 2 completed</b><span><i class="zero"></i></span></div>
+            </div>
+            <div class="course-grid">
+                <article class="course" data-course="Responsive Web Design">
+                    <div class="course-top"><span class="provider figma">◈</span><button class="bookmark">♡</button>
+                    </div>
+                    <p class="course-meta">FREECODECAMP · INTERMEDIATE</p>
+                    <h3>Responsive Web Design</h3>
+                    <p class="description">Design accessible, responsive layouts that look great on every screen.</p>
+                    <div class="tags"><b>CSS</b><b>Accessibility</b><b>UI Design</b></div>
+                    <div class="course-foot"><span>◷ 6 hours</span><button class="start-course">Start course →</button>
+                    </div>
+                </article>
+                <article class="course" data-course="Git & GitHub Collaboration">
+                    <div class="course-top"><span class="provider git">⌘</span><button class="bookmark">♡</button></div>
+                    <p class="course-meta">GITHUB SKILLS · BEGINNER</p>
+                    <h3>Git & GitHub Collaboration</h3>
+                    <p class="description">Use version control, pull requests, and team workflows with confidence.</p>
+                    <div class="tags"><b>Git</b><b>GitHub</b><b>Teamwork</b></div>
+                    <div class="course-foot"><span>◷ 4 hours</span><button class="start-course">Start course →</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="stage last">
+            <div class="stage-title"><span class="step aqua">03</span>
+                <div><small>THEN · WEEKS 8–12</small>
+                    <h2>Launch your portfolio</h2>
+                    <p>Transform your learning into proof of work that stands out to recruiters.</p>
+                </div>
+                <div class="stage-progress"><b>0 / 1 completed</b><span><i class="zero"></i></span></div>
+            </div>
+            <div class="course-grid single">
+                <article class="course featured" data-course="Build a Portfolio Project">
+                    <div class="featured-mark">RECOMMENDED FOR YOU</div>
+                    <div class="course-top"><span class="provider project">✦</span><span class="match">Career
+                            maker</span></div>
+                    <p class="course-meta">EDUPATH LIVE PROJECT · PRACTICAL</p>
+                    <h3>Build a Portfolio Project</h3>
+                    <p class="description">Work on a guided industry-style project, publish it, and add it to your
+                        verified EduPath portfolio.</p>
+                    <div class="tags"><b>React</b><b>GitHub</b><b>Portfolio</b><b>Industry Project</b></div>
+                    <div class="course-foot"><span>◷ 4 weeks</span><button class="start-course">Start project →</button>
+                    </div>
+                </article>
+                <aside class="tip"><span>✦</span>
+                    <h3>Why this path?</h3>
+                    <p>React, responsive design, and Git are the biggest missing skills in your target-role profile.</p>
+                    <a href="skill-profile.html">See your skill gap analysis →</a>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <div class="toast" id="toast">Course added to your active learning plan!</div>
+    <script src="learning-path.js"></script>
+</body>
+
+</html>

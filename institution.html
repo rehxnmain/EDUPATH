@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>EduPath Institution Portal</title>
+    <link rel="stylesheet" href="institution.css">
+</head>
+<body>
+    <main class="app">
+        <aside class="side">
+            <a class="brand" href="institution.html">✦ Edu<b>Path</b></a>
+            <div class="institution-card">
+                <div class="logo">EI</div>
+                <b id="institutionName">EduPath Institute</b>
+                <small>Verified institution</small>
+            </div>
+            <nav>
+                <button class="nav active" data-page="dashboard">▦ <span>Dashboard</span></button>
+                <button class="nav" data-page="courses">＋ <span>Upload courses</span></button>
+                <button class="nav" data-page="students">♙ <span>Student profiles</span></button>
+                <button class="nav" data-page="oldCourses">◷ <span>Course history</span></button>
+                <button class="nav" data-page="analytics">⌁ <span>Readiness analytics</span></button>
+            </nav>
+            <a href="index.html" class="logout" id="logout">↪ Back to login</a>
+        </aside>
+        <section class="main">
+            <header>
+                <div>
+                    <span class="eyebrow">INSTITUTION WORKSPACE</span>
+                    <h1 id="title">Institution dashboard</h1>
+                    <p id="subtitle">Monitor courses, learners, and academic outcomes.</p>
+                </div>
+                <div class="top-actions">
+                    <button id="studentPortal">Student portal ↗</button>
+                    <button id="resetData">Reset demo data</button>
+                </div>
+            </header>
+            <section id="page"></section>
+        </section>
+    </main>
+    <div id="toast" class="toast"></div>
+    <script src="institution.js"></script>
+</body>
+</html>

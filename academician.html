@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Academician Portal | EduPath</title>
+    <link rel="stylesheet" href="academician.css">
+</head>
+
+<body>
+    <main class="app">
+        <aside class="side"><a class="brand" href="index.html">✦ Edu<b>Path</b></a>
+            <div class="profile">
+                <div class="avatar" id="avatar">AK</div><b id="mentorName">Dr. Alfisha Khan</b><small>Verified
+                    academician</small>
+            </div>
+            <nav><button class="nav active" data-page="dashboard">▦ <span>Dashboard</span></button><button class="nav"
+                    data-page="profile">◇ <span>Mentor profile</span></button><button class="nav" data-page="requests">♙
+                    <span>Mentorship requests</span><i id="requestCount">3</i></button><button class="nav"
+                    data-page="students">⌁ <span>Student progress</span></button><button class="nav"
+                    data-page="research">✦ <span>Research & projects</span></button></nav><button class="logout"
+                id="logout">↪ Logout</button>
+        </aside>
+        <section class="main">
+            <header>
+                <div><span class="eyebrow">ACADEMICIAN WORKSPACE</span>
+                    <h1 id="title">Mentor dashboard</h1>
+                    <p id="subtitle">Guide learners, share expertise, and build academic–industry connections.</p>
+                </div>
+                <div class="tools"><button id="studentPortal">Student portal ↗</button><button id="theme">◐
+                        Theme</button></div>
+            </header>
+            <section id="page"></section>
+        </section>
+    </main>
+    <div id="toast" class="toast"></div>
+    <script src="academician.js"></script>
+</body>
+
+</html>

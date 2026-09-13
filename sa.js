@@ -1,0 +1,7 @@
+let current=1, rating=0, seconds=899; const questions=5; const $=s=>document.querySelector(s); const $$=s=>document.querySelectorAll(s);
+function render(){ $$('.question').forEach(q=>q.classList.toggle('active',+q.dataset.question===current)); $('#currentQuestion').textContent=current; const p=current*20; $('#percent').textContent=p+'%'; $('#bar').style.width=p+'%'; $('#back').style.visibility=current===1?'hidden':'visible'; $('#next').innerHTML=current===5?'Finish assessment <span>✓</span>':'Continue <span>→</span>'; }
+$('#next').onclick=()=>{const currentInput=$(`.question[data-question="${current}"] input:checked`) || (current===4 && rating);if(!currentInput){alert('Please select an answer before continuing.');return;}if(current<5){current++;render()}else{let points=0;$$('input[type=radio]:checked').forEach(x=>points+=parseInt(x.value)||2); points+=rating||3;$('#score').textContent=Math.min(94,62+points*2);$('#resultModal').classList.add('show');localStorage.setItem('edupathAssessment','complete');}};
+$('#back').onclick=()=>{if(current>1){current--;render()}};
+$('#save').onclick=()=>{localStorage.setItem('edupathAssessmentStep',current);alert('Your assessment progress has been saved.');};
+$$('.rating button').forEach(b=>b.onclick=()=>{rating=+b.dataset.rate;$('#ratingValue').value=rating;$$('.rating button').forEach(x=>x.classList.toggle('selected',+x.dataset.rate<=rating));});
+setInterval(()=>{if(seconds<=0)return;seconds--;let m=Math.floor(seconds/60),s=seconds%60;$('#timer').textContent=`${m}:${String(s).padStart(2,'0')}`},1000);render();

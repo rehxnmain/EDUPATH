@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Complete Profile | EduPath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="complete-profile-details.css">
+</head>
+<body>
+  <div class="bg"><span class="orb orb1"></span><span class="orb orb2"></span></div>
+  <main class="shell">
+    <section class="intro">
+      <a class="brand" href="../index.html"><span>✦</span>Edu<b>Path</b></a>
+      <span class="eyebrow">PROFILE SETUP</span>
+      <h1>Help opportunities<br><em>find you.</em></h1>
+      <p>Add a few more details so EduPath can personalize your courses, internships, mentorship, and placement recommendations.</p>
+      <div class="promise">
+        <div>✓ Better skill matching</div>
+        <div>✓ Recruiter-ready profile</div>
+        <div>✓ Personalized opportunities</div>
+      </div>
+      <small class="creator">A Code SlayeRs Creation</small>
+    </section>
+
+    <section class="form-panel">
+      <div class="heading">
+        <span class="step">STEP 2 OF 2</span>
+        <h2>Complete your profile</h2>
+        <p>These details improve the quality of your recommendations.</p>
+      </div>
+
+      <form id="detailsForm">
+        <div class="fields two">
+          <label>City / Location<input id="location" placeholder="Example: Greater Noida" required></label>
+          <label>LinkedIn profile<input id="linkedin" type="url" placeholder="https://linkedin.com/in/yourname"></label>
+        </div>
+        <div class="fields two">
+          <label>GitHub / Portfolio link<input id="github" type="url" placeholder="https://github.com/yourname"></label>
+          <label>Preferred work mode
+            <select id="workMode" required>
+              <option value="">Choose preference</option>
+              <option>Remote</option>
+              <option>Hybrid</option>
+              <option>On-site</option>
+              <option>Open to all</option>
+            </select>
+          </label>
+        </div>
+        <div class="fields two">
+          <label>Opportunity type
+            <select id="opportunityType" required>
+              <option value="">Choose type</option>
+              <option>Internship</option>
+              <option>Full-time job</option>
+              <option>Part-time</option>
+              <option>Live project</option>
+              <option>Apprenticeship</option>
+            </select>
+          </label>
+          <label>Availability
+            <select id="availability" required>
+              <option value="">Choose availability</option>
+              <option>Immediately</option>
+              <option>Within 1 month</option>
+              <option>Within 3 months</option>
+              <option>After graduation</option>
+            </select>
+          </label>
+        </div>
+        <label>Short introduction<textarea id="bio" placeholder="Tell recruiters about your strengths, interests, and career goals..." required></textarea></label>
+        
+        <div class="interest-heading">
+          <div><span class="eyebrow">YOUR INTERESTS</span><h3>What would you like to explore?</h3></div>
+          <small>Select all that apply</small>
+        </div>
+        
+        <div class="interest-grid">
+          <label class="interest"><input type="checkbox" value="Web Development"><span>⌘<b>Web Development</b></span></label>
+          <label class="interest"><input type="checkbox" value="AI and Data"><span>◌<b>AI & Data</b></span></label>
+          <label class="interest"><input type="checkbox" value="Cloud"><span>☁<b>Cloud</b></span></label>
+          <label class="interest"><input type="checkbox" value="Cybersecurity"><span>◈<b>Cybersecurity</b></span></label>
+          <label class="interest"><input type="checkbox" value="UI/UX Design"><span>◇<b>UI/UX Design</b></span></label>
+          <label class="interest"><input type="checkbox" value="Entrepreneurship"><span>✦<b>Entrepreneurship</b></span></label>
+        </div>
+
+        <div class="preview">
+          <span>✦</span>
+          <p><b>Your profile is becoming stronger.</b><small>Adding your interests helps us personalize your learning path.</small></p>
+          <strong id="percent">35%</strong>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="back">← Back</button>
+          <button class="submit" type="submit">Save and continue <b>→</b></button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+
+function toast(t, c='#34d6a4') {
+    let x = $('#toast');
+    x.textContent = t;
+    x.style.background = c;
+    x.classList.add('show');
+    setTimeout(() => x.classList.remove('show'), 2300);
+}
+
+function update() {
+    let ids = ['location', 'workMode', 'opportunityType', 'availability', 'bio'];
+    let n = ids.filter(id => $('#' + id).value.trim()).length;
+    let interest = $$('.interest input:checked').length;
+    let p = Math.min(100, 35 + Math.round((n + interest) / 7 * 65));
+    $('#percent').textContent = p + '%';
+}
+
+$$('input,select,textarea').forEach(x => {
+    x.oninput = update;
+    x.onchange = update;
+});
+
+$('#detailsForm').onsubmit = e => {
+    e.preventDefault();
+    
+    let data = {
+        location: $('#location').value,
+        linkedin: $('#linkedin').value,
+        github: $('#github').value,
+        workMode: $('#workMode').value,
+        opportunityType: $('#opportunityType').value,
+        availability: $('#availability').value,
+        bio: $('#bio').value,
+        interests: [...$$('.interest input:checked')].map(x => x.value),
+        detailsCompleted: true,
+        updatedAt: new Date().toISOString()
+    };
+
+    let old = JSON.parse(localStorage.getItem('edupath_profile') || '{}');
+    localStorage.setItem('edupath_profile', JSON.stringify({ ...old, ...data }));
+    
+    toast('Profile details saved!');
+
+    // Redirect into the pages directory
+    setTimeout(() => {
+        window.location.href = 'sd.html';
+    }, 900);
+};
+
+$('#back').onclick = () => location.href = 'register.html';
+update();
+</script>
+</body>
+</html>

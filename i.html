@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Internships | EduPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="i.css">
+</head>
+
+<body>
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <aside><a class="brand"><span>✦</span>Edu<b>Path</b></a>
+        <p class="made">A CODE SLAYERS CREATION</p>
+        <nav><a href="sd.html">⌂ <i>Dashboard</i></a><a href="sa.html">✓ <i>Skill
+                    Assessment</i></a><a href="sp.html">◉ <i>My Skills</i></a><a href="l.html">▣
+                <i>Learning Path</i></a><a class="active" href="#">▤ <i>Internships</i></a><a href="pl.html">♙
+                <i>Placements</i></a><a href="po.html">▱ <i>My Portfolio</i></a></nav>
+        <footer><small>NEED HELP?</small><a href="h.html">? <i>Help Center</i></a><a href="index.html">↪ <i>Logout</i></a>
+        </footer>
+    </aside>
+    <main>
+        <header>
+            <div>
+                <p class="crumb">DASHBOARD <b>/</b> INTERNSHIPS</p>
+                <h1>Find work that <em>moves you forward.</em></h1>
+                <p>Opportunities selected for your skills, learning progress, and career ambition.</p>
+            </div>
+            <div class="profile"><span>AS</span>
+                <div><b>user</b><small>Computer Science</small></div><i>⌄</i>
+            </div>
+        </header>
+        <section class="match-hero">
+            <div class="spark">✦</div>
+            <div><small>PERSONALIZED FOR YOU</small>
+                <h2>0 internships match your profile.</h2>
+                <p>Your  Developer pathway and current 0% readiness score not open strong opportunities.</p>
+            </div>
+            <div class="hero-metrics"><span><b>0</b> excellent matches</span><span><b>0</b> new this week</span></div>
+            <button id="viewMatches">Explore matches →</button>
+        </section>
+        <section class="search">
+            <div class="searchbox">⌕ <input id="searchInput"
+                    placeholder="Search internships, companies, or skills..."><button id="searchBtn">Search</button>
+            </div><button id="filterBtn">☷ Filters <b>3</b></button><button class="saved" id="savedBtn">♡ Saved</button>
+        </section>
+        <section class="filter-row">
+            <span>Popular:</span><button>Frontend</button><button>React</button><button>Remote</button><button>Data
+                Science</button><button>Product Design</button>
+            <div><span>Sort by:</span><select id="sort">
+                    <option>Best match</option>
+                    <option>Newest first</option>
+                    <option>Deadline soon</option>
+                </select></div>
+        </section>
+        <section class="body-grid">
+            <div>
+                <div class="list-head">
+                    <div>
+                        <h2>Recommended internships that you can try after completing your suggested cources <span id="count">12</span></h2>
+                        <p>Ranked by your skills and career fit.</p>
+                    </div><button class="view-toggle">▤ List &nbsp; ▦</button>
+                </div>
+                <div class="opportunities" id="opportunities">
+                    <article class="job-card" data-name="Frontend Developer Intern NexaSoft React JavaScript">
+                        <div class="company purple">NS</div>
+                        <div class="job-main">
+                            <div class="job-title">
+                                <h3>Frontend Developer Intern</h3><span class="excellent">92% match</span>
+                            </div>
+                            <p class="company-name">NexaSoft Technologies <i>•</i> Bengaluru, India <i>•</i> Hybrid</p>
+                            <div class="tags"><b>React</b><b>JavaScript</b><b>CSS</b><b>Git</b></div>
+                            <div class="job-meta"><span>◷ 3 months</span><span>₹18,000 / month</span><span>⌛ Apply by
+                                    Sep 28</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">Apply now
+                                →</button></div>
+                    </article>
+                    <article class="job-card" data-name="UI Engineer Intern PixelCraft React Figma">
+                        <div class="company pink">PC</div>
+                        <div class="job-main">
+                            <div class="job-title">
+                                <h3>UI Engineer Intern</h3><span class="excellent">88% match</span>
+                            </div>
+                            <p class="company-name">PixelCraft Studio <i>•</i> Remote</p>
+                            <div class="tags"><b>React</b><b>Figma</b><b>Tailwind CSS</b></div>
+                            <div class="job-meta"><span>◷ 4 months</span><span>₹15,000 / month</span><span>⌛ Apply by
+                                    Oct 05</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">Apply now
+                                →</button></div>
+                    </article>
+                    <article class="job-card" data-name="Software Engineering Intern QuantumByte Node React">
+                        <div class="company aqua">QB</div>
+                        <div class="job-main">
+                            <div class="job-title">
+                                <h3>Software Engineering Intern</h3><span class="good">79% match</span>
+                            </div>
+                            <p class="company-name">QuantumByte Labs <i>•</i> Hyderabad, India <i>•</i> On-site</p>
+                            <div class="tags"><b>JavaScript</b><b>Node.js</b><b>React</b><b>APIs</b></div>
+                            <div class="job-meta"><span>◷ 6 months</span><span>₹25,000 / month</span><span>⌛ Apply by
+                                    Sep 22</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">Apply now
+                                →</button></div>
+                    </article>
+                    <article class="job-card" data-name="Web Development Intern CloudScale HTML CSS JavaScript">
+                        <div class="company blue">CS</div>
+                        <div class="job-main">
+                            <div class="job-title">
+                                <h3>Web Development Intern</h3><span class="good">74% match</span>
+                            </div>
+                            <p class="company-name">CloudScale Solutions <i>•</i> Pune, India <i>•</i> Hybrid</p>
+                            <div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b><b>REST APIs</b></div>
+                            <div class="job-meta"><span>◷ 3 months</span><span>₹12,000 / month</span><span>⌛ Apply by
+                                    Oct 12</span></div>
+                        </div>
+                        <div class="job-actions"><button class="heart">♡</button><button class="apply">Apply now
+                                →</button></div>
+                    </article>
+                </div><button class="load" id="load">Load more opportunities ↓</button>
+            </div>
+            <aside class="right-col">
+                <section class="panel applications">
+                    <div class="panel-head">
+                        <h3>My applications</h3><a href="#">View all</a>
+                    </div>
+                    
+                </section>
+                <section class="panel profile-tip"><span>◎</span>
+                    <h3>Boost your match score</h3>
+                    <p>Complete React Fundamentals to improve your average internship match by <b>8%.</b></p><a
+                        href="learning-path.html">Continue learning →</a>
+                </section>
+                <section class="panel mentor">
+                    <div class="mentor-face">RK</div>
+                    <div><small>MENTOR PICK</small>
+                        <h3>pick your mentor</h3>
+                        <p>find best mentor for your desired future</p><button id="mentorBtn">Request mentorship
+                            →</button>
+                    </div>
+                </section>
+            </aside>
+        </section>
+    </main>
+    <div class="modal" id="applyModal">
+        <div><button class="close">×</button><span class="modal-icon">✦</span>
+            <h2 id="modalTitle">Apply for internship</h2>
+            <p>Your verified EduPath portfolio and current resume will be shared with this employer.</p><label>Short
+                note to recruiter<textarea
+                    placeholder="Tell the recruiter why you are a great fit..."></textarea></label><label
+                class="check"><input type="checkbox" checked><span></span>Use my verified portfolio and
+                resume</label><button id="confirmApply">Submit application →</button>
+        </div>
+    </div>
+    <div id="toast" class="toast">Application submitted successfully!</div>
+    <script src="i.js"></script>
+</body>
+
+</html>

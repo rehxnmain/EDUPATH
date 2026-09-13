@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account | EduPath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="grid"></div>
+  <main class="shell">
+    <section class="brand-panel">
+      <a class="brand" href="#"><span class="brand-mark">✦</span><span>Edu<span>Path</span></span></a>
+      <div class="hero-copy">
+        <span class="eyebrow">A CODE SLAYERS CREATION</span>
+        <h1>Build your path<br>to what’s next.</h1>
+        <p>Connect your skills with meaningful courses, internships, mentors, and placement opportunities.</p>
+      </div>
+      <div class="feature-list">
+        <div><b>01</b><span><strong>Discover your strengths</strong><small>Smart skill profiling and gap analysis</small></span></div>
+        <div><b>02</b><span><strong>Learn with purpose</strong><small>Courses tailored to your career goals</small></span></div>
+        <div><b>03</b><span><strong>Unlock opportunities</strong><small>Internships and jobs matched to you</small></span></div>
+      </div>
+      <p class="creator">Designed and built by <strong>Code SlayeRs</strong></p>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-top"><div><span class="step-label">STEP 1 OF 2</span><h2>Create your account</h2><p>Start your learning and career journey today.</p></div><a href="../index.html">Already have an account? <b>Sign in</b></a></div>
+      <div class="progress"><span></span></div>
+      <form id="registerForm">
+        <div class="role-title"><span></span><p>I am joining EduPath as a</p></div>
+        <div class="roles">
+          <label class="role-card active"><input type="radio" name="role" value="Student" checked><span class="role-icon">🎓</span><span><b>Student</b><small>Learn, grow & get hired</small></span></label>
+          <label class="role-card"><input type="radio" name="role" value="Academician"><span class="role-icon">📚</span><span><b>Academician</b><small>Train & collaborate</small></span></label>
+          <label class="role-card"><input type="radio" name="role" value="Industry"><span class="role-icon">🏢</span><span><b>Industry</b><small>Hire & mentor talent</small></span></label>
+          <label class="role-card"><input type="radio" name="role" value="Institution"><span class="role-icon">🏛️</span><span><b>Institution</b><small>Track growth & outcomes</small></span></label>
+        </div>
+        <div class="fields two"><label>First name<input required id="firstName" type="text" placeholder="Alex"></label><label>Last name<input required id="lastName" type="text" placeholder="Smith"></label></div>
+        <div class="fields"><label>Email address<input required id="email" type="email" placeholder="alex@example.com"></label></div>
+        <div class="fields two"><label>Password<div class="password-wrap"><input required id="password" minlength="8" type="password" placeholder="Minimum 8 characters"><button type="button" class="show-password" aria-label="Show password">◉</button></div></label><label>Confirm password<input required id="confirmPassword" type="password" placeholder="Repeat password"></label></div>
+        <label class="check"><input required type="checkbox"><span></span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+        <button class="submit" type="submit"><span>Create my account</span><b>→</b></button>
+        <p class="notice">Your profile stays private and secure. You control what you share.</p>
+      </form>
+    </section>
+  </main>
+
+<script>
+// Registration Redirect Fix
+const registerForm = document.getElementById('registerForm');
+const roleInputs = document.querySelectorAll('input[name="role"]');
+
+// Highlight active role card styling
+roleInputs.forEach(input => {
+    input.addEventListener('change', (e) => {
+        document.querySelectorAll('.role-card').forEach(card => card.classList.remove('active'));
+        e.target.closest('.role-card').classList.add('active');
+    });
+});
+
+registerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const role = document.querySelector('input[name="role"]:checked')?.value || 'Student';
+
+    if (password !== confirmPassword) {
+        showToast('Passwords do not match', 'error');
+        return;
+    }
+
+    // Save session data
+    localStorage.setItem('edupath_demo', JSON.stringify({
+        name: `${firstName} ${lastName}`,
+        email: email,
+        role: role,
+        loggedIn: true
+    }));
+
+    showToast('Account created! Redirecting...', 'success');
+
+    // Redirect to profile setup page
+    setTimeout(() => {
+        window.location.href = 'complete-profile-details.html';
+    }, 1200);
+});
+
+function showToast(message, type) {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    toast.style.cssText = `position:fixed;right:24px;bottom:24px;padding:13px 16px;border-radius:9px;background:${type==='success'?'#18b98b':'#ef4444'};color:white;font-size:11px;font-weight:700;transform:translateY(80px);opacity:0;transition:all 0.3s;z-index:10000;`;
+    document.body.appendChild(toast);
+    setTimeout(() => { toast.style.transform = 'translateY(0)'; toast.style.opacity = '1'; }, 10);
+    setTimeout(() => { toast.style.transform = 'translateY(80px)'; toast.style.opacity = '0'; setTimeout(() => document.body.removeChild(toast), 300); }, 3000);
+}
+</script>
+</body>
+</html>
